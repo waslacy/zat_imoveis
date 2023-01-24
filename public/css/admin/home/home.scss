@@ -1,0 +1,36 @@
+@import '../admin';
+
+#home{
+    @include confiPage();
+
+    .container{
+        .row{
+            @include flex(center);
+            gap: 20px;
+        }
+
+        .botoes-paginas{
+            @include flex(center, center, column);
+            width: calc(25% - 20px);
+            border-radius: 10px;
+            background-color: $dourado-principal;
+            padding: 30px;
+            box-shadow: -5px 5px 5px rgba($color: $preto-padrao, $alpha: 0.4),
+                        -5px 5px 5px rgba($color: $cinza-claro, $alpha: 0.4) inset;
+            transition: .2s linear;
+
+            &:hover{
+                background-color: rgba($color: $dourado-principal, $alpha: 0.8);
+            }
+
+            i{
+                font-size: 3em;
+                color: $cinza-claro;
+            }
+
+            h3{
+                color: $cinza-claro;
+            }
+        }
+    }
+}

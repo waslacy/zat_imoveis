@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  max-width: 1300px;
+  padding: 0 40px;
+}
+
+a {
+  text-decoration: none;
+  color: #181818;
+  cursor: pointer;
+}
+a:hover {
+  color: #181818;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
+#navbar {
+  background-color: #262C30;
+  width: 100%;
+  position: fixed;
+}
+#navbar .nav-item {
+  margin-left: 20px;
+}
+#navbar .nav-link {
+  color: #fff;
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: inherit;
+  align-items: center;
+}
+#navbar .nav-link i {
+  font-size: 1.6em;
+  margin-right: 5px;
+}
+
+section#imoveis .container {
+  min-height: 100vh;
+  padding-top: 140px;
+  background: url("/src/imgs/logo_zat_imoveis_1080w.webp") center center no-repeat;
+  background-size: 70%;
+}/*# sourceMappingURL=imoveis.css.map */

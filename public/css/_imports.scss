@@ -1,0 +1,55 @@
+$dourado-principal: #B1A56F;
+$dourado-claro: #DAD0A6;
+$cinza-claro: #E5E5E5;
+$chumbo: #4F5457;
+$cinza-escuro: #262C30;
+$preto-padrao: #181818;
+$azul-escuro: #2B3C59;
+$azul: #596C8B;
+$azul-claro: #99A7BE;
+$vinho-escuro: #502626;
+$vinho: #654848;
+$vinho-claro: #896B60;
+
+@mixin flex($justify, $align: inherit, $direction: row){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin button-padrao($fundo: $dourado-principal, $cor: #fff, $p-y: 12px, $p-x: 24px, $b-radius: 5px, $border: none){
+    background-color: $fundo;
+    color: $cor;
+    padding: $p-y $p-x;
+    border-radius: $b-radius;
+    border: $border;
+    text-decoration: none;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: rgba($color: $fundo, $alpha: 0.9);
+    }
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 40px;
+}
+
+a{
+    text-decoration: none;
+    color: $preto-padrao;
+    cursor: pointer;
+
+    &:hover{
+        color: $preto-padrao;
+    }
+}

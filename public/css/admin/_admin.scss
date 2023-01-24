@@ -1,0 +1,35 @@
+@import '../imports';
+
+body{
+    background-color: $cinza-claro;
+}
+
+#navbar{
+    background-color: $cinza-escuro;
+    width: 100%;
+    position: fixed;
+
+    .nav-item{
+        margin-left: 20px;
+    }
+
+    .nav-link{
+        color: #fff;
+        font-size: 1.1em;
+        @include flex(inherit, center);
+
+        i{
+            font-size: 1.6em;
+            margin-right: 5px;
+        }
+    }
+}
+
+@mixin confiPage(){
+    .container{
+        min-height: 100vh;
+        padding-top: 140px;
+        background: url('/src/imgs/logo_zat_imoveis_1080w.webp') center center no-repeat;
+        background-size: 70%;
+    }
+}
