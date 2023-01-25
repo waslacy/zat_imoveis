@@ -44,39 +44,28 @@ body {
   margin-right: 5px;
 }
 
-#home .container {
+section#novo_imovel .container {
   min-height: 100vh;
   padding-top: 140px;
   background: url("/src/imgs/logo_zat_imoveis_1080w.webp") center center no-repeat;
   background-attachment: fixed;
   background-size: 25%;
 }
-#home .container .row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: inherit;
-  gap: 20px;
+section#novo_imovel .select2-selection--multiple {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
 }
-#home .container .botoes-paginas {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: calc(25% - 20px);
-  border-radius: 10px;
-  background-color: #B1A56F;
-  padding: 30px;
-  box-shadow: -5px 5px 5px rgba(24, 24, 24, 0.4), -5px 5px 5px rgba(229, 229, 229, 0.4) inset;
-  transition: 0.2s linear;
+section#novo_imovel .novo-cliente {
+  background-color: #4F5457;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s;
+  width: 100%;
 }
-#home .container .botoes-paginas:hover {
-  background-color: rgba(177, 165, 111, 0.8);
-}
-#home .container .botoes-paginas i {
-  font-size: 3em;
-  color: #E5E5E5;
-}
-#home .container .botoes-paginas h3 {
-  color: #E5E5E5;
-}/*# sourceMappingURL=home.css.map */
+section#novo_imovel .novo-cliente:hover {
+  background-color: rgba(79, 84, 87, 0.9);
+}/*# sourceMappingURL=novoImovel.css.map */

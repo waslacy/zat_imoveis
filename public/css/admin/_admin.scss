@@ -30,6 +30,7 @@ body{
         min-height: 100vh;
         padding-top: 140px;
         background: url('/src/imgs/logo_zat_imoveis_1080w.webp') center center no-repeat;
-        background-size: 70%;
+        background-attachment: fixed;
+        background-size: 25%;
     }
 }

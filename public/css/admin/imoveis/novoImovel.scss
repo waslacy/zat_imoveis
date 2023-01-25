@@ -1,0 +1,16 @@
+@import '../admin';
+
+section#novo_imovel{
+    @include confiPage();
+
+    .select2-selection--multiple{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .novo-cliente{
+        @include button-padrao($fundo: $chumbo, $p-y: 10px);
+        width: 100%;
+    }
+}

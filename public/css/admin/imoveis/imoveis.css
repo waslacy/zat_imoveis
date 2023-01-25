@@ -48,5 +48,87 @@ section#imoveis .container {
   min-height: 100vh;
   padding-top: 140px;
   background: url("/src/imgs/logo_zat_imoveis_1080w.webp") center center no-repeat;
-  background-size: 70%;
+  background-attachment: fixed;
+  background-size: 25%;
+}
+section#imoveis .select2-selection--multiple {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 0.5rem;
+}
+section#imoveis .btn-filtro {
+  background-color: #B1A56F;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s;
+  width: 100%;
+}
+section#imoveis .btn-filtro:hover {
+  background-color: rgba(177, 165, 111, 0.9);
+}
+section#imoveis .botao {
+  background-color: #4F5457;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s;
+}
+section#imoveis .botao:hover {
+  background-color: rgba(79, 84, 87, 0.9);
+}
+section#imoveis .imoveis {
+  margin: 80px 0 0;
+}
+section#imoveis .imoveis .imovel {
+  padding: 0;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.92);
+  margin-bottom: 15px;
+}
+section#imoveis .imoveis .imovel .img {
+  padding-left: 0;
+}
+section#imoveis .imoveis .imovel .img img {
+  border-radius: 5px 0 0 5px;
+}
+section#imoveis .imoveis .imovel .content {
+  padding: 20px 0 20px 20px;
+}
+section#imoveis .imoveis .imovel .content .desc .tipo_imovel {
+  color: #262C30;
+  margin-bottom: 5px;
+}
+section#imoveis .imoveis .imovel .content .desc .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: inherit;
+  gap: 10px;
+  margin-top: 25px;
+}
+section#imoveis .imoveis .imovel .content .desc .infos .coluna1, section#imoveis .imoveis .imovel .content .desc .infos .coluna2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: inherit;
+  gap: 30px;
+}
+section#imoveis .imoveis .imovel .content .desc .infos .coluna1 span:not(:last-child), section#imoveis .imoveis .imovel .content .desc .infos .coluna2 span:not(:last-child) {
+  position: relative;
+}
+section#imoveis .imoveis .imovel .content .desc .infos .coluna1 span:not(:last-child)::before, section#imoveis .imoveis .imovel .content .desc .infos .coluna2 span:not(:last-child)::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #262C30;
+  display: block;
+  position: absolute;
+  right: -18px;
+  top: 50%;
 }/*# sourceMappingURL=imoveis.css.map */

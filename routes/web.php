@@ -14,34 +14,48 @@ Route::post('/auth', 'AdminController@auth');
 
 Route::group(['prefix' => '/admin'], function (){
     Route::get('/', 'AdminController@index');
-    
-    Route::get('/imoveis', 'AdminImoveisController@indexImovel');
-    Route::get('/imoveis/{id}', 'AdminImoveisController@cadastroImovel');
-    Route::post('/imoveis/{id}', 'AdminImoveisController@saveImovel');
-    Route::get('/imoveis/{id}/delete', 'AdminImoveisController@deleteImovel');
 
-    Route::get('/caracteristicas-imoveis', 'AdminImoveisController@indexCaracteristicaImovel');
-    Route::post('/caracteristicas-imoveis/{id}', 'AdminImoveisController@saveCaracteristicaImovel');
-    Route::get('/caracteristicas-imoveis/{id}/delete', 'AdminImoveisController@deleteCaracteristicaImovel');
+    Route::group(['prefix' => '/imoveis'], function(){
+        Route::get('/', 'AdminImoveisController@indexImovel');
+        Route::post('/filtro', 'AdminImoveisController@filtrarImovel');
+        Route::get('/{id}', 'AdminImoveisController@cadastrarImovel');
+        Route::post('/{id}', 'AdminImoveisController@saveImovel');
+        Route::get('/{id}/delete', 'AdminImoveisController@deleteImovel');
+    });
 
-    Route::get('/tipos-imoveis', 'AdminImoveisController@indexTipo');
-    Route::post('/tipos-imoveis/{id}', 'AdminImoveisController@saveTipo');
-    Route::get('/tipos-imoveis/{id}/delete', 'AdminImoveisController@deleteTipo');
+    Route::group(['prefix' => '/caracteristicas-imoveis'], function(){
+        Route::get('/', 'AdminImoveisController@indexCaracteristicaImovel');
+        Route::post('/{id}', 'AdminImoveisController@saveCaracteristicaImovel');
+        Route::get('/{id}/delete', 'AdminImoveisController@deleteCaracteristicaImovel');
+    });
 
-    Route::get('/condominios', 'AdminCondominiosController@indexCondominio');
-    Route::get('/condominios/{id}', 'AdminCondominiosController@cadastroCondominio');
-    Route::post('/condominios/{id}', 'AdminCondominiosController@saveCondominio');
-    Route::get('/condominios/{id}/delete', 'AdminCondominiosController@deleteCondominio');
+    Route::group(['prefix' => '/tipos-imoveis'], function(){
+        Route::get('/', 'AdminImoveisController@indexTipo');
+        Route::post('/{id}', 'AdminImoveisController@saveTipo');
+        Route::get('/{id}/delete', 'AdminImoveisController@deleteTipo');
+    });
 
-    Route::get('/caracteristicas-condominios', 'AdminCondominiosController@indexCaracteristicaCondominio');
-    Route::post('/caracteristicas-condominios/{id}', 'AdminCondominiosController@saveCaracteristicaCondominio');
-    Route::get('/caracteristicas-condominios/{id}/delete', 'AdminCondominiosController@deleteCaracteristicaCondominio');
+    Route::group(['prefix' => '/condominios'], function(){
+        Route::get('/', 'AdminCondominiosController@indexCondominio');
+        Route::post('/{id}', 'AdminCondominiosController@saveCondominio');
+        Route::get('/{id}/delete', 'AdminCondominiosController@deleteCondominio');
+    });
 
-    Route::get('/proprietarios', 'AdminProprietariosController@index');
-    Route::post('/proprietarios/{id}', 'AdminProprietariosController@save');
-    Route::get('/proprietarios/{id}/delete', 'AdminProprietariosController@delete');
+    Route::group(['prefix' => '/caracteristicas-condominios'], function(){
+        Route::get('/', 'AdminCondominiosController@indexCaracteristicaCondominio');
+        Route::post('/{id}', 'AdminCondominiosController@saveCaracteristicaCondominio');
+        Route::get('/{id}/delete', 'AdminCondominiosController@deleteCaracteristicaCondominio');
+    });
 
-    Route::get('/regioes', 'AdminRegioesController@index');
-    Route::post('/regioes/{id}', 'AdminRegioesController@save');
-    Route::get('/regioes/{id}/delete', 'AdminRegioesController@delete');
+    Route::group(['prefix' => '/proprietarios'], function(){
+        Route::get('/', 'AdminProprietariosController@index');
+        Route::post('/{id}', 'AdminProprietariosController@save');
+        Route::get('/{id}/delete', 'AdminProprietariosController@delete');
+    });
+
+    Route::group(['prefix' => '/regioes'], function(){
+        Route::get('/', 'AdminRegioesController@index');
+        Route::post('/{id}', 'AdminRegioesController@save');
+        Route::get('/{id}/delete', 'AdminRegioesController@delete');
+    });
 });

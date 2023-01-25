@@ -17,8 +17,12 @@ return new class extends Migration
             $table->id();
             $table->string('titulo'); 
             $table->text('descricao'); 
-            $table->float('preco'); 
-            $table->float('preco_promocional'); 
+            $table->float('preco_venda'); 
+            $table->float('preco_venda_promocional'); 
+            $table->float('preco_anual'); 
+            $table->float('preco_anual_promocional'); 
+            $table->float('preco_temporada'); 
+            $table->float('preco_temporada_promocional'); 
             $table->float('area_utl');
             $table->float('area_total');
             $table->integer('quartos');
