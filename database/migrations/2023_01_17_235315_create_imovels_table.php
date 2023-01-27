@@ -25,6 +25,7 @@ return new class extends Migration
             $table->float('preco_temporada_promocional'); 
             $table->float('area_utl');
             $table->float('area_total');
+            $table->float('area_terreno');
             $table->integer('quartos');
             $table->integer('suítes');
             $table->integer('banheiros');
@@ -43,6 +44,7 @@ return new class extends Migration
             $table->string('bairro');
             $table->foreignId('regiao_id')->constrained();
             $table->string('cidade');
+            $table->string('estado');
             $table->boolean('destaque');
             $table->string('imagem_principal');
             $table->text('notas');

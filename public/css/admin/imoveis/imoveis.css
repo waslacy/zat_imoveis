@@ -27,6 +27,7 @@ body {
   background-color: #262C30;
   width: 100%;
   position: fixed;
+  z-index: 99;
 }
 #navbar .nav-item {
   margin-left: 20px;
@@ -50,10 +51,12 @@ section#imoveis .container {
   background: url("/src/imgs/logo_zat_imoveis_1080w.webp") center center no-repeat;
   background-attachment: fixed;
   background-size: 25%;
+  position: relative;
 }
 section#imoveis .select2-selection--multiple {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  font-size: 1.25rem;
   border-radius: 0.5rem;
 }
 section#imoveis .btn-filtro {

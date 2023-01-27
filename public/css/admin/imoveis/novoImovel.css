@@ -27,6 +27,7 @@ body {
   background-color: #262C30;
   width: 100%;
   position: fixed;
+  z-index: 99;
 }
 #navbar .nav-item {
   margin-left: 20px;
@@ -50,13 +51,34 @@ section#novo_imovel .container {
   background: url("/src/imgs/logo_zat_imoveis_1080w.webp") center center no-repeat;
   background-attachment: fixed;
   background-size: 25%;
+  position: relative;
 }
-section#novo_imovel .select2-selection--multiple {
+section#novo_imovel .container::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(229, 229, 229, 0.9);
+  top: 140px;
+  z-index: 0;
+}
+section#novo_imovel h1, section#novo_imovel .zona {
+  position: relative;
+  z-index: 10;
+}
+section#novo_imovel .select2-selection--multiple, section#novo_imovel .select2-selection--single {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   border-radius: 0.5rem;
 }
-section#novo_imovel .novo-cliente {
+section#novo_imovel .select2-selection--single {
+  height: 45px;
+}
+section#novo_imovel .select2-selection--single .select2-selection__arrow {
+  height: 100%;
+}
+section#novo_imovel .novo-cliente, section#novo_imovel .novo-condominio {
   background-color: #4F5457;
   color: #fff;
   padding: 10px 24px;
@@ -66,6 +88,6 @@ section#novo_imovel .novo-cliente {
   transition: 0.2s;
   width: 100%;
 }
-section#novo_imovel .novo-cliente:hover {
+section#novo_imovel .novo-cliente:hover, section#novo_imovel .novo-condominio:hover {
   background-color: rgba(79, 84, 87, 0.9);
 }/*# sourceMappingURL=novoImovel.css.map */

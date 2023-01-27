@@ -1,15 +1,41 @@
 @import '../admin';
 
+
+
 section#novo_imovel{
     @include confiPage();
 
-    .select2-selection--multiple{
+    .container::before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($color: $cinza-claro, $alpha: 0.9);
+        top: 140px;
+        z-index: 0;
+    }
+
+    h1, .zona{
+        position: relative;
+        z-index: 10;
+    }
+
+    .select2-selection--multiple, .select2-selection--single{
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         border-radius: 0.5rem;
     }
 
-    .novo-cliente{
+    .select2-selection--single{
+        height: 45px;
+
+        .select2-selection__arrow{
+            height: 100%;
+        }
+    }
+
+    .novo-cliente, .novo-condominio{
         @include button-padrao($fundo: $chumbo, $p-y: 10px);
         width: 100%;
     }
